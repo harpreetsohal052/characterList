@@ -1,0 +1,18 @@
+h2 {
+    text-align: center;
+}
+
+.detail-card {
+    display: flex;
+    margin: 20px;
+}
+
+.detail-card img {
+    max-width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.detail-info {
+    flex-grow: 1;
+}

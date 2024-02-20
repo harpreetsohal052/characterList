@@ -1,0 +1,17 @@
+<h2>Character List</h2>
+<div class="character-card" *ngFor="let character of characters" (click)="goToDetails(character.id)">
+    <div class="card">
+        <div class="image-side">
+            <img [src]="character.image" alt="{{ character.name }} thumbnail">
+        </div>
+        <div class="name-side">
+            <h2 class="character-name">{{ character.name }}</h2>
+        </div>
+    </div>
+</div>
+
+<div class="pagination">
+    <button *ngIf="currentPage > 1" (click)="loadPage(currentPage - 1)">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button *ngIf="currentPage < totalPages" (click)="loadPage(currentPage + 1)">Next</button>
+</div>
